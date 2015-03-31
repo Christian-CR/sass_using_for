@@ -1,0 +1,76 @@
+/* sass style */
+body{
+	background:#0A141D;
+}
+@keyframes animacion{
+	from{
+			-webkit-perspective: 1px;
+			perspective: 1px;
+			transform: rotateZ(0deg);
+			-webkit-transform: rotateZ(0deg);
+	}
+	to{
+			-webkit-perspective: 511px;
+			perspective: 511px;
+			transform: rotateZ(360deg);
+			-webkit-transform: rotateZ(360deg);
+	}
+}
+@-webkit-keyframes animacion{
+	from{
+		-webkit-perspective: 1px;
+		perspective: 1px;
+		transform: rotateZ(0deg);
+		-webkit-transform: rotateZ(0deg);
+	}
+	to{
+		-webkit-perspective: 511px;
+		perspective: 511px;
+		transform: rotateZ(360deg);
+		-webkit-transform: rotateZ(360deg);
+	}
+}
+/*div.wrapper{
+	animation: animacion 3s infinite ease-in-out;
+	-webkit-animation: animacion 3s infinite;  Safari and Chrome 
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate-reverse;
+}
+*/
+div.wrapper{
+		transform-style: preserve-3d;
+			transform-origin: 50% 50% 0;
+			display: block;
+			text-align: center;
+			perspective: 500px;
+			-webkit-perspective: 500px;
+			transform: rotateX(206deg);
+			-webkit-transform: rotateX(206deg);
+	}
+@for $i from 1 through 100 {
+
+	div.wrapper	div:nth-of-type(#{$i}){
+		border: solid #0D9FB6 1px;
+		background:#002634;
+		display: inline-block;
+		width: 50px; height: 50px;
+		transform: rotateZ(1.5 * $i +deg ) translateZ(5 + $i +px);
+		-webkit-transform: rotateZ(1.5 + $i +deg) translateZ(5 * $i +px);
+		> div {
+			border-radius:50%;
+			-webkit-border-radius:50%;
+			background:#0D1015;
+			/*transition*/
+			-webkit-transition: all 200ms ease-in-out;
+			-moz-transition: all 200ms ease-in-out;
+			-ms-transition: all 200ms ease-in-out;
+			-o-transition: all 200ms ease-in-out;
+			transition: all 200ms ease-in-out;
+			&:hover{
+				background: #245059;
+				-webkit-box-shadow: 0 0 50px 1px #8CFFFF;
+				box-shadow: 0 0 50px 1px #8CFFFF;
+			}
+		}
+	}
+}
