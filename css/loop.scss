@@ -39,13 +39,13 @@ body{
 */
 div.wrapper{
 		transform-style: preserve-3d;
-			transform-origin: 50% 50% 0;
-			display: block;
-			text-align: center;
-			perspective: 500px;
-			-webkit-perspective: 500px;
-			transform: rotateX(206deg);
-			-webkit-transform: rotateX(206deg);
+		transform-origin: 50% 50% 0;
+		display: block;
+		text-align: center;
+		perspective: 500px;
+		-webkit-perspective: 500px;
+		transform: rotateX(206deg);
+		-webkit-transform: rotateX(206deg);
 	}
 @for $i from 1 through 100 {
 
@@ -54,7 +54,7 @@ div.wrapper{
 		background:#002634;
 		display: inline-block;
 		width: 50px; height: 50px;
-		transform: rotateZ(1.5 * $i +deg ) translateZ(5 + $i +px);
+		transform: rotateZ(1.5 + $i +deg ) translateZ(5 * $i +px);
 		-webkit-transform: rotateZ(1.5 + $i +deg) translateZ(5 * $i +px);
 		> div {
 			border-radius:50%;
